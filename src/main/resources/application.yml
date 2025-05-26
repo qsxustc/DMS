@@ -1,0 +1,26 @@
+server:
+  ip: localhost
+  port: 9090
+
+# http://39.105.215.78/
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/DMS?serverTimezone=GMT%2b8
+    username: root
+    password:  # 输入密码
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #扫描所有mybatis的xml文件
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+files:
+  upload:
+    path: /Users/qsx/Desktop/DMS/files/ # 文件上传路径
